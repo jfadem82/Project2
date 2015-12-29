@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'customers/index' => 'customers#index'
+
+  get 'customers/new' => 'customers#create'
+
+  post 'customers/create' => 'customers#show'
+
+  get 'customers/:id' => 'customers#show'
+
+  get 'customers/:id/edit' => 'customers#edit'
+
+  put 'customers/update' => 'customers#update'
+
+  delete 'customers/destroy' => 'customers#destroy'
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
