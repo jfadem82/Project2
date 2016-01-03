@@ -1,9 +1,25 @@
 Rails.application.routes.draw do
-  get 'customers/index' => 'customers#index'
+  # get 'products/index' => 'products#index'
 
-  get 'customers/new' => 'customers#create'
+  # get 'products/create' => 'products#'
 
-  post 'customers/create' => 'customers#show'
+  # get 'products/new' => 'products#create'
+
+  # get 'products/edit'
+
+  # get 'products/show'
+
+  # get 'products/update'
+
+  # get 'products/destroy'
+
+  root 'customers#index'
+
+  get 'customers' => 'customers#index'
+
+  get 'customers/new' => 'customers#new'
+
+  post 'customers/' => 'customers#create'
 
   get 'customers/:id' => 'customers#show'
 
