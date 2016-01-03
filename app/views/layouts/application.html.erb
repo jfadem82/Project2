@@ -9,8 +9,14 @@
 </head>
 <body>
 
-<%= params %>
+<% if logged_in? %>
+Hello, <%= current_customer.first_name %>
+<% end %>
+	<%= render 'layouts/nav' %>
+	<div class = 'container'>
+
 <%= yield %>
+<%= render 'layouts/params' %>
 
 </body>
 </html>
