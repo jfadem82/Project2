@@ -1,2 +1,29 @@
-<h1>Customers#show</h1>
-<p>Find me in app/views/customers/show.html.erb</p>
+<h1>Customer Profiles</h1>
+
+Hello, <%= @customer.first_name %> ! What would you like to do?
+
+<br>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %>
+
+<br>
+
+<% if @customer.products.count > 0 %>
+<h3><%= @customer.first_name %>'s Products %</h3>
+<ul>
+	<%=@customer.products.each do |product| %>
+	<li><%= product.name %>: <%= product.quantity %> <%=product.price %></li>
+</ul>
+
+<hr>
+
+<% end %>
+
+
+<%= link_to 'Back', root_path %>
+
+<br>
+
+<button><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %><button>
+
+<% end %>
