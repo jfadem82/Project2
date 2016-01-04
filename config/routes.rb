@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
 
-  # get 'products/index' => 'products#index'
+  get 'products/index' => 'products#index'
 
   # get 'products/create' => 'products#'
 
