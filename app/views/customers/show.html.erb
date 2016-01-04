@@ -1,10 +1,21 @@
-<h1>Customer Profiles</h1>
+<h1>Member Area</h1>
 
-Hello, <%= @customer.first_name %>! What would you like to do?
+<h2>Hello, <%= @customer.first_name %>! What would you like to do?</h2>
 
 <br>
 
+<button><%= link_to 'Back', root_path %></button>
+
+<br>
+
+<% if current_customer === @customer %>
 <button><%= link_to 'Edit', edit_customer_path(@customer) %></button>
+
+<br>
+
+<button><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %></button>
+
+<% end %>
 
 <br>
 
@@ -28,16 +39,6 @@ Hello, <%= @customer.first_name %>! What would you like to do?
 	<% end %>
   </p>
 <% end %>
-<% if current_customer == @customer %>
-<button><%= link_to 'Edit', edit_customer_path(@customer) %></button>
 
-<br>
 
-<button><%= link_to 'Back', root_path %></button>
-
-<br>
-
-<button><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %></button>
-
-<% end %>
 <% end %>
