@@ -1,0 +1,24 @@
+<h1>Log In To Your Account</h1>
+
+<%= form_for :login do |f| %>
+
+<div class="row">
+<%= f.label :email %>
+<%= f.text_field :email %>
+</div>
+
+<div class="row">
+<%= f.label :password %>
+<%= f.password_field :password %>
+</div>
+
+<div class="row">
+<button><%= f.submit 'Log In' %></button>
+</div>
+
+<div class="row">
+<h3>Don't Have An Account?</h3>
+<button><%= link_to 'Create An Account', customers_new_path %></button>
+</div>
+
+<% end %>
