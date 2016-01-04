@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Our Coffee<small>The Finest, 100% Organic Blends</small></h1>
+<h1>Our Coffee<small> The Finest, 100% Organic Blends</small></h1>
 <div class="container-fluid">
 <table class="table table-hover">
   <thead>
@@ -13,7 +13,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+<div class="sampler">
+<img src="/Sampler.jpg" alt="Wolf's Head Coffee Sampler" height="400">
+</div>
   <tbody>
     <% @products.each do |product| %>
       <tr>
@@ -28,4 +30,4 @@
 </table>
 </div>
 <br>
-
+<button><%= link_to 'Create An Account', customers_new_path %></button>
