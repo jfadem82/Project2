@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   get 'customers/:customer_id/products/new' => 'products#new', as: :product_new
 
-  get 'customers/customer_id/products/:id/edit' => 'products#edit'
+  get 'customers/:customer_id/products/:id/edit' => 'products#edit'
 
   get 'products/:product_id/products/:id' => 'products#show'
 

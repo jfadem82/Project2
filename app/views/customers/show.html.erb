@@ -1,25 +1,25 @@
 <h1>Customer Profiles</h1>
 
-Hello, <%= @customer.first_name %> ! What would you like to do?
+Hello, <%= @customer.first_name %>! What would you like to do?
 
 <br>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %>
+<button><%= link_to 'Edit', edit_customer_path(@customer) %></button>
 
 <br>
 
 <% if @customer.products.count > 0 %>
 <h3><%= @customer.first_name %>'s Products %</h3>
 <ul>
-	<%=@customer.products.each do |product| %>
-	<li><%= product.name %>: <%= product.quantity %> <%=product.price %></li>
+	<% @customer.products.each do |product| %>
+	<li><%= product.name %>: <%= product.quantity %> <%= product.price %></li>
 </ul>
 
 <hr>
 
 <% end %>
 
-<% if @customer.products.count >0 %>
+<% if @customer.products.count > 0 %>
 	<p>
 	<strong> Products </strong>
 	<% @customer.products.each do |product| %>
@@ -28,14 +28,16 @@ Hello, <%= @customer.first_name %> ! What would you like to do?
 	<% end %>
   </p>
 <% end %>
-<%= link_to 'Edit', edit_customer_path(@customer) %>
+<% if current_customer == @customer %>
+<button><%= link_to 'Edit', edit_customer_path(@customer) %></button>
 
 <br>
 
-<%= link_to 'Back', root_path %>
+<button><%= link_to 'Back', root_path %></button>
 
 <br>
 
 <button><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %></button>
 
+<% end %>
 <% end %>
