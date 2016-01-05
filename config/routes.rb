@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
 
-  get 'products/index' => 'products#index'
+  root 'products#index'
 
   # get 'products/create' => 'products#'
 
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # get 'products/edit'
 
-  # get 'products/show'
+  get 'about' => 'products#show', as: :about
 
   # get 'products/update'
 
@@ -20,22 +20,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
 
   get 'logout' => 'sessions#destroy'
-
-  root 'customers#index'
-
-  get 'customers/:customer_id/products' => 'products#index', as: :customer_products
-
-  post 'customers/:customer_id/products' => 'products#create'
-
-  get 'customers/:customer_id/products/new' => 'products#new', as: :product_new
-
-  get 'customers/:customer_id/products/:id/edit' => 'products#edit'
-
-  get 'products/:product_id/products/:id' => 'products#show'
-
-  patch 'customers/:customer_id/products/:id' => 'products#update'
-
-  delete 'customers/:customer_id/products/:id' => 'customers#destroy'
 
   get 'customers' => 'customers#index'
 
@@ -51,6 +35,21 @@ Rails.application.routes.draw do
 
   delete 'customers/:id' => 'customers#destroy'
 
+  get 'customers/:customer_id/products' => 'products#index', as: :customer_products
+
+  post 'customers/:customer_id/products' => 'products#create'
+
+  get 'customers/:customer_id/products/new' => 'products#new', as: :product_new
+
+  get 'customers/:customer_id/products/:id/edit' => 'products#edit'
+
+  get 'products/:product_id/products/:id' => 'products#show'
+
+  patch 'customers/:customer_id/products/:id' => 'products#update'
+
+  delete 'customers/:customer_id/products/:id' => 'customers#destroy'
+
+  
 #   resources :cats do
 #   resources :todos
 # end
