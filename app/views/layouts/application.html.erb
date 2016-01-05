@@ -9,11 +9,12 @@
 </head>
 <body>
 
+<%= render 'layouts/nav' %>
+<div class = 'container'>
+
 <% if logged_in? %>
-Hello, <%= current_customer.first_name %>
+<h4>Hello, <%= current_customer.first_name %></h4>
 <% end %>
-	<%= render 'layouts/nav' %>
-	<div class = 'container'>
 
 <%= yield %>
 <%= render 'layouts/params' %>

@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
  
 
-  root 'products#index'
+  get 'products/index' => 'products#index', as: :products
 
   # get 'products/create' => 'products#'
 
-  # get 'products/new' => 'products#create'
+  root 'products#create'
 
-  # get 'products/edit'
+  get 'products/edit' => 'products#edit', as: :blog
 
   get 'about' => 'products#show', as: :about
 
@@ -15,11 +15,11 @@ Rails.application.routes.draw do
 
   # get 'products/destroy'
 
-  get 'login' => 'sessions#new'
+  get 'login' => 'sessions#new', as: :login
 
   post 'login' => 'sessions#create'
 
-  get 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy', as: :logout
 
   get 'customers' => 'customers#index'
 
