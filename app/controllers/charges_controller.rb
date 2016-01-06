@@ -1,6 +1,4 @@
 class ChargesController < ApplicationController
-
-
   def new
     # this will remain empty unless you need to set some instance variables to pass on
   end
@@ -23,8 +21,7 @@ class ChargesController < ApplicationController
       description: 'Rails Stripe customer',
       currency: 'usd'
     )
- 
-    # place more code upon successfully creating the charge
+   
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
