@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   get 'products/index' => 'products#index', as: :products
 
+  # get 'charges/new' => 'charges#new', as: :charges
+
+  resources :charges
+
   # get 'products/create' => 'products#'
 
   root 'products#create'

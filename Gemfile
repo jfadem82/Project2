@@ -38,7 +38,8 @@ gem 'figaro'
 
 gem 'aws-sdk'
 
-gem 'stripe', git: 'https://github.com/stripe/stripe-ruby'
+gem 'stripe'
+gem 'stripe_event'
 
 # gem 'active_cart', '~> 0.0.18'
 # Use Unicorn as the app server
