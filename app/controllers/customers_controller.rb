@@ -13,7 +13,8 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
 
     if @customer.save
-      redirect_to customers_path
+      redirect_to customer_path(@customer)
+      session[:customer_id] = @customer.id.to_s
     else
       render :new
     end
