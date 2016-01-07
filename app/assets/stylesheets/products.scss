@@ -3,6 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#home {
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
 
 #sampler {
 	border-radius: 1em;
@@ -13,6 +22,7 @@
         margin-right: -50%;
         transform: translate(-50%, -50%)
 }
+
 
 .table-hover {
 	border-radius: 1em;

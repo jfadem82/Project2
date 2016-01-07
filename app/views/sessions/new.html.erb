@@ -1,5 +1,7 @@
 <h2 id="login">Log In To Your Account</h2>
 
+<%= form_for :login do |f| %>
+
 <form class="form-horizontal">
   <div class="form-group">
 
@@ -17,7 +19,7 @@
 </div>
 <br>
 <div class="row">
-<button type="button" class="btn btn-success"><%= f.submit %></button>
+<button type="button" class="btn btn-success" id='log'><%= f.submit 'Log In'  %></button>
 </div>
 
 <div class="row">
@@ -25,8 +27,6 @@
 <button type="button" class="btn btn-primary"><%= link_to "Let's Change That", customers_new_path %></button>
 </div>
 
-<% end %>
 </div>
-
-
-
+<% end %>
+<% end %>
