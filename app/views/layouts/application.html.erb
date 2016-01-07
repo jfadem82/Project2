@@ -9,17 +9,22 @@
   <%= csrf_meta_tags %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body background-color:"#6E6E6E">
+<body>
+<%= render 'layouts/params' %>
+<hr>
 
 <%= render 'layouts/nav' %>
 
-<div class = 'container'>
-<img id="logo" alt="Wolf's Head Coffee" src="/wh_logo.png" height="75">
+<section class="row side_padding">
+	<div class="col-md-12 center_logo">
+		<img id="logo" alt="Wolf's Head Coffee" src="/wh_logo.png" height="75">
+	</div>
+</section>
 
 
 <%= yield %>
-<%= render 'layouts/params' %>
-</div>
+
+
 
 </body>
 </html>

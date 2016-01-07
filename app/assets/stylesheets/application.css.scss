@@ -24,6 +24,7 @@ $lato: 'Lato', sans-serif;
 $playfair-display: 'Playfair Display', serif;
 
 body {
+  background-color:"#6E6E6E";
 	font-family: $playfair-display;
 	font-weight: normal;
 }
@@ -58,12 +59,7 @@ a:hover {
 }
 
 #logo {
-	margin: 0;
-    position: absolute;
-    top: 14%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+	margin: 0 auto;
 }
 
 #login {
@@ -77,4 +73,31 @@ a:hover {
 
 #hi{
   margin-top: 2.7%;
+}
+
+
+.products { 
+
+  text-align: center;
+
+  img {
+    width:100%
+  }
+}
+
+
+.sassy {
+  background: #D8D8D8;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+
+.side_padding {
+  padding:0 10%;
+
+}
+
+.center_logo {
+  text-align: center;
 }
