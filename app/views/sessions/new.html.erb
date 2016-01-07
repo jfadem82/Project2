@@ -1,24 +1,32 @@
-<h1>Log In To Your Account</h1>
+<h2 id="login">Log In To Your Account</h2>
 
+<form class="form-horizontal">
+  <div class="form-group">
+
+<div id="container">
 <%= form_for :login do |f| %>
 
 <div class="row">
-<%= f.label :email %>
+<%= f.label :email %> <br>
 <%= f.text_field :email %>
 </div>
 
 <div class="row">
-<%= f.label :password %>
+<%= f.label :password %> <br>
 <%= f.password_field :password %>
 </div>
-
+<br>
 <div class="row">
-<button><%= f.submit 'Log In' %></button>
+<button type="button" class="btn btn-success"><%= f.submit %></button>
 </div>
 
 <div class="row">
-<h3>Don't Have An Account?</h3>
-<button><%= link_to 'Create An Account', customers_new_path %></button>
+<h5>Don't Have An Account?</h5>
+<button type="button" class="btn btn-primary"><%= link_to "Let's Change That", customers_new_path %></button>
 </div>
 
 <% end %>
+</div>
+
+
+
