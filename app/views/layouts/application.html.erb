@@ -2,22 +2,24 @@
 <html>
 <head>
   <title>WhCoffee</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body>
+<body background-color:"#6E6E6E">
 
 <%= render 'layouts/nav' %>
-<div class = 'container'>
 
-<% if logged_in? %>
-<h4>Hello, <%= current_customer.first_name %></h4>
-<% end %>
+<div class = 'container'>
+<img id="logo" alt="Wolf's Head Coffee" src="/wh_logo.png" height="75">
+
 
 <%= yield %>
 <%= render 'layouts/params' %>
+</div>
 
 </body>
 </html>

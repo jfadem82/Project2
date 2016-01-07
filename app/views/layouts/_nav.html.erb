@@ -16,13 +16,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'Home', root_path %> </li>
+        <li class="active"><%= link_to 'Home', root_path %> </li>,
         <li><%= link_to 'Our Products', products_path %> </li>
         <li><%= link_to 'Log In', login_path %> </li>
         <li><%= link_to 'About Us', about_path %> </li>
         <li><%= link_to 'Blog', blog_path %> </li>
         <li><%= link_to 'Log Out', logout_path %> </li>
+        <% if logged_in? %>
+        <li id ='hi'><strong>Hello, <%= current_customer.first_name %></strong></li>
+        <% end %>
       </ul>
 </nav>
 
-<%= link_to 'customers', customers_path %> <%#= link_to 'todos', todos_path %><hr>
+<%#= link_to 'customers', customers_path %> <%#= link_to 'todos', todos_path %>

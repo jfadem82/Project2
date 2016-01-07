@@ -17,7 +17,64 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Lato:700|Playfair+Display);
 
+
+$lato: 'Lato', sans-serif;
+$playfair-display: 'Playfair Display', serif;
+
+body {
+	font-family: $playfair-display;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $lato;
+  font-weight: normal;
+}
+
+.button {
+  font-family: $lato;
+  font-weight: bold;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+#log {
+  color: white;
+}
+
+#log:hover {
+  color: black;
+}
 .navbar-brand {
 	background: white;
+}
+
+#logo {
+	margin: 0;
+    position: absolute;
+    top: 14%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#login {
+	 margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#hi{
+  margin-top: 2.7%;
 }

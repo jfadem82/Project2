@@ -1,35 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Our Coffee<small> The Finest, 100% Organic Blends</small></h1>
-<div class="container-fluid">
-<table class="table table-hover">
-  <thead>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <tr>
-      <th>Title</th>
-      <th>Origin</th>
-      <th>Quantity</th>
-      <th>&nbsp&nbsp&nbspPrice</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-<div class="sampler">
-<img src="/Sampler.jpg" alt="Wolf's Head Coffee Sampler" height="400">
+<h4 class="whs">The Finest, 100% Organic Blends. Delivered straight to your door.</h4>
+<h5 class="whs1">$59.99</h5>
+<div class="col-md-8">
+<p>Wolf's Head Coffee is premium, 100% organic, and delicious. Available in whole bean or freshly ground varieties, our roasts will delight the senses and help you start your day off right, without putting a dent in your wallet. Our sampler includes five different 4oz whole bean roasts, delivered to your door for only $59.99. That's more than double the amount of coffee for $10 less than those other coffee subscription services' samplers.</p>
+<hr>
+<p>Once you become a believer, you can contact us at info@shopwolfshead.com to create a monthly delivery specifically tailored to your taste and monthly consumption. We also offer enterprise pricing for offices, and wholesale. Look out, hipster "craft" coffee companies. We're coming for you.</p>
 </div>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.country_of_origin %></td>
-        <td>&nbsp&nbsp&nbsp&nbsp<%= product.quantity %></td>
-        <td>&nbsp&nbsp$<%= product.price %></td>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<button><%= link_to 'Subscribe', new_charge_path %></button>
-<br>
-<button><%= link_to 'Create An Account', customers_new_path %></button>
-</div>
-<br>

@@ -1,3 +1,66 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#home {
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+#sampler {
+	border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+
+.table-hover {
+	border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.whs {
+	border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.whs1 {
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.col-md-8 {
+        background-color: #D8D8D8;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        margin-top: 51%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+}
