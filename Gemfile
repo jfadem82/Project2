@@ -38,8 +38,8 @@ gem 'figaro'
 
 gem 'aws-sdk'
 
-gem 'stripe'
-gem 'stripe_event'
+# gem 'stripe'
+# gem 'stripe_event'
 
 # gem 'active_cart', '~> 0.0.18'
 # Use Unicorn as the app server
