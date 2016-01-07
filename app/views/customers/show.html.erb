@@ -5,16 +5,16 @@
 
 <br>
 
-<button type="button" class="btn btn-primary"><%= link_to 'Back', root_path %></button>
+<button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to 'Back', root_path %></button>
 
 <br>
 
 <% if current_customer === @customer %>
-<button button type="button" class="btn btn-warning"><%= link_to 'Edit My Account', edit_customer_path(@customer) %></button>
+<button button type="button" class="btn btn-warning btn-lg btn-block"><%= link_to 'Edit My Account', edit_customer_path(@customer) %></button>
 
 <br>
 
-<button type="button" class="btn btn-danger"><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %></button>
+<button type="button" class="btn btn-danger btn-lg btn-block"><%= link_to 'Delete My Account', customer_path(@customer), method: :delete, data: {confirm: 'Are You Sure You Want To Leave Us? :('} %></button>
 
 <% end %>
 
