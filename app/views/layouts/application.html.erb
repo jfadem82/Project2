@@ -15,9 +15,7 @@
 
 <div class = 'container'>
 <img id="logo" alt="Wolf's Head Coffee" src="/wh_logo.png" height="75">
-<% if logged_in? %>
-<h4>Hello, <%= current_customer.first_name %></h4>
-<% end %>
+
 
 <%= yield %>
 <%= render 'layouts/params' %>
