@@ -1,0 +1,21 @@
+<h4>Add A Comment</h4>
+
+<%= form_for [@customer, post, @comment] do |f| %>
+	<div class='form-group'>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+	</div>
+	<div class='form-group'>
+		<%= f.label :post_id %>
+		<%= f.hidden_field :post_id, :value => post.id %>
+	</div>
+
+	<div class='form-group'>
+		<%= f.label :customer_id %>
+		<%= f.hidden_field :customer_id, :value => current_customer.id %>
+	</div>
+	
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>

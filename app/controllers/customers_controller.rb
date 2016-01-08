@@ -21,6 +21,8 @@ class CustomersController < ApplicationController
   end
 
   def show
+    @posts = @customer.posts.all
+    @post = Post.new
     if @customer.products
       @products = @customer.products
     end
