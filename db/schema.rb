@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103210431) do
+ActiveRecord::Schema.define(version: 20160108094020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "post_id"
+    t.integer  "customer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "comments", ["customer_id"], name: "index_comments_on_customer_id", using: :btree
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
@@ -36,6 +47,16 @@ ActiveRecord::Schema.define(version: 20160103210431) do
     t.string   "password_digest"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "body"
+    t.integer  "customer_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "posts", ["customer_id"], name: "index_posts_on_customer_id", using: :btree
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "country_of_origin"
@@ -49,5 +70,8 @@ ActiveRecord::Schema.define(version: 20160103210431) do
 
   add_index "products", ["customer_id"], name: "index_products_on_customer_id", using: :btree
 
+  add_foreign_key "comments", "customers"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "posts", "customers"
   add_foreign_key "products", "customers"
 end

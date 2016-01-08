@@ -1,0 +1,30 @@
+<section class="row side_padding">
+<div class="col-md-12 products">
+<h2>Coffee Addict Confessions</h2>
+<h3><small>The Wolf's Head Coffee Co. Blog</small></h3>
+<% if current_customer.present? %>
+  <button class='btn btn-primary btn-small'><%= link_to 'New Post', new_post_path %></button>
+<% end %>
+  <p><button class='btn btn-primary btn-small'><%= link_to "Log in", login_path %></button> to add a confession</p>
+<img src="/blog.jpg">
+
+<table class="table table-hover">
+  	<thead>
+    	<tr>
+	      	<th>Name</th>
+	      	<th>Member for</th>
+	      	<th colspan="3"></th>
+    	</tr>
+  	</thead>
+
+  	<tbody>
+    	<% @posts.each do |post| %>
+      	<tr>
+	        
+      	</tr>
+  	</tbody>
+</table>
+</div>
+</section>
+
+<% end %>

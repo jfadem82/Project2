@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # get 'charges/new' => 'charges#new', as: :charges
 
-  resources :charges
+  # resources :charges
 
   # get 'products/create' => 'products#'
 
@@ -56,7 +56,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-end
+  
 
   
   # The priority is based upon order of creation: first created -> highest priority.

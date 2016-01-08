@@ -23,6 +23,7 @@ class CustomersController < ApplicationController
   def show
     @posts = @customer.posts.all
     @post = Post.new
+    @comment = Comment.new
     if @customer.products
       @products = @customer.products
     end

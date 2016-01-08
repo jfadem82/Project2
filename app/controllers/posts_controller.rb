@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+	def index
+		@posts = Post.all
+	end
+
 	def new
 		@customer = customer.find(session[:customer_id])
 		@post = @customer.posts.new
