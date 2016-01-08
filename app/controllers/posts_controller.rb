@@ -1,16 +1,24 @@
 class PostsController < ApplicationController
 	def index
 		@posts = Post.all
+		@customers = Customer.all.order('id ASC')
 	end
 
+	def show
+		@customer = Customer.find(params[:id])
+		@posts = Post.all
+    	@post = Post.new
+    	@comment = Comment.new
+    end
+
 	def new
-		@customer = customer.find(session[:customer_id])
+		@customer = Customer.find(params[:customer_id])
 		@post = @customer.posts.new
 	end
 
 	def create
-		@customer = customer.find(session[:customer_id])
-		@post = @customer.posts.build(post_params)
+		@customer = Customer.find(params[:customer_id])
+		@post = @customer.posts.new(post_params)
 		if @post.save
 			redirect_to customer_path(@customer)
 		else
@@ -18,13 +26,18 @@ class PostsController < ApplicationController
 		end
 	end
 
+	def destroy
+    	@customer.destroy
+    	redirect_to customer_path(@customer)
+  end
+
 private
-
-	def set_post
-		@post = Post.find(params[:id])
-	end
-
-	def post_params
-	    params.require(:post).permit(:title, :body, :customer_id)
-	end
+def post_params
+  params.require(:post).permit(:title, :body, :customer_id)
 end
+
+def set_post
+  @post = Post.find(params[:id])
+  end
+end
+

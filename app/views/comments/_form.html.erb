@@ -1,6 +1,6 @@
 <h4>Add A Comment</h4>
 
-<%= form_for [@customer, post, @comment] do |f| %>
+<%= form_for [@customer, @post, @comment] do |f| %>
 	<div class='form-group'>
 		<%= f.label :body %>
 		<%= f.text_area :body %>

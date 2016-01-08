@@ -21,11 +21,9 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @posts = @customer.posts.all
-    @post = Post.new
-    @comment = Comment.new
+    @post = @customer.posts.new
     if @customer.products
-      @products = @customer.products
+       @products = @customer.products
     end
   end
 

@@ -1,0 +1,25 @@
+<h1>Posts</h1>
+
+<% if @customer.posts.count > 0 %>
+	<% @posts.each do |post| %>
+		<h4><%= post.name %></h4>
+		<p><%= post.body %></p>
+		<% if post.comments.count > 0 %>
+		  <%post.comments.each do |comment| %>
+			<h6><%= comment.customer.name %></h6>
+			<p><%= comment.body %></p>
+		  <% end %>
+		<%= render 'comments/form', :post => post %>
+<% else %>
+	<h4>This customer does not have any posts.</h4>
+<% end %>
+
+<% if @customer == current_customer %>
+	<hr>
+	<h4>Add a new post</h4>
+	<%= render 'posts/form' %>
+<% end %>
+
+<% end %>
+
+<% end %>
