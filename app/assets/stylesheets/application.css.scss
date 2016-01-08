@@ -101,3 +101,9 @@ a:hover {
 .center_logo {
   text-align: center;
 }
+
+@media (max-width: 600px) {
+  .make_small{
+    width: 100%;
+  }
+}
