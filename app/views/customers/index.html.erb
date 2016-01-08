@@ -1,5 +1,9 @@
+<section class="row side_padding">
+<div class="col-md-12 products">
 <h1>Wolf's Head Coffee</h1>
 <% @customers.each do |customer| %>
-	<%= link_to customer.first_name, customer_path(customer) %> <hr>
+	<button type="button" class="btn btn-info"><%= link_to customer.first_name, customer_products_path(customer) %></button> <hr>
 <% end %>
-<button><%= link_to 'Create An Account', customers_new_path %></button>
+</div>
+</section>
+<!-- <button><%#= link_to 'Create An Account', customers_new_path %></button> -->
