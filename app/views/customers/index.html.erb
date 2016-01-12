@@ -2,7 +2,7 @@
 <div class="col-md-12 products">
 <h1>Wolf's Head Coffee</h1>
 <% @customers.each do |customer| %>
-	<button type="button" class="btn btn-info"><%= link_to customer.first_name, customer_products_path(customer) %></button> <hr>
+  <button type="button" class="btn btn-info"><%= link_to customer.first_name, customer_products_path(customer) %></button> <hr>
 <% end %>
 </div>
 </section>

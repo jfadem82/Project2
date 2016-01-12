@@ -8,30 +8,30 @@
 <form class="form-horizontal">
   <div class="form-group">
 
-<div>
-<%= form_for :login do |f| %>
+    <div>
+      <%= form_for :login do |f| %>
 
-<div class="row">
-<%= f.label :email %> <br>
-<%= f.text_field :email %>
-</div>
+    <div class="row">
+	  <%= f.label :email %> <br>
+	  <%= f.text_field :email %>
+	</div>
 
-<div class="row">
-<%= f.label :password %> <br>
-<%= f.password_field :password %>
-</div>
-<br>
-<div class="row">
-<%= f.submit 'Log In' %>
-</div>
+	<div class="row">
+	  <%= f.label :password %> <br>
+	  <%= f.password_field :password %>
+	</div>
+	<br>
+	<div class="row">
+	  <%= f.submit 'Log In' %>
+	</div>
 
-<div class="row">
-<h5>Don't Have An Account?</h5>
-<button type="button" class="btn btn-primary"><%= link_to "Let's Change That", customers_new_path %></button>
-</div>
+  	<div class="row">
+  	  <h5>Don't Have An Account?</h5>
+  	    <button type="button" class="btn btn-primary"><%= link_to "Let's Change That", customers_new_path %></button>
+	</div>
 
-</div>
-<% end %>
+  </div>
+  <% end %>
 <% end %>
 </div>
 </session>
