@@ -53,6 +53,8 @@ Rails.application.routes.draw do
 
   delete 'customers/:customer_id/products/:id' => 'customers#destroy'
 
+  # get ''
+
   resources :customers do
     resources :posts do
       resources :comments

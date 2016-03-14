@@ -5,9 +5,9 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@customer = Customer.find(params[:id])
-		@posts = Post.all
-    	@post = Post.new
+		@customer = Customer.find(params[:customer_id])
+		@post = Post.find(params[:id])
+    	@newPost = Post.new
     	@comment = Comment.new
     end
 
